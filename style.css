@@ -1,0 +1,562 @@
+
+/* 1. Colour palette and base settings */
+:root {
+  --forest: #183D32;
+  --cream: #F4F0E6;
+  --lime: #B7D94B;
+  --muted: #64736B;
+  --line: rgba(24, 61, 50, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--forest);
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+h2 span,
+.hero h1 span,
+.contact-section h2 span {
+  color: var(--lime);
+}
+
+/* 2. Header and navigation */
+.site-header {
+  min-height: 76px;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
+.brand span {
+  color: #789C24;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 0.83rem;
+  font-weight: 500;
+}
+
+.site-nav a:hover,
+.text-link:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: #789C24;
+  text-underline-offset: 5px;
+}
+
+/* 3. Hero section */
+.hero {
+  min-height: 570px;
+  padding: 90px 10% 70px;
+  background: var(--forest);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow,
+.item-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.hero .eyebrow {
+  color: var(--lime);
+}
+
+.hero h1 {
+  margin: 22px 0;
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  line-height: 0.91;
+  letter-spacing: -0.09em;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 590px;
+  color: rgba(244, 240, 230, 0.82);
+  font-size: 1rem;
+}
+
+.hero-actions,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.button {
+  min-height: 46px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: var(--lime);
+  color: var(--forest);
+}
+
+.button-primary:hover {
+  background: #c8e76b;
+}
+
+.button-outline {
+  border-color: var(--cream);
+  color: var(--cream);
+}
+
+.button-outline:hover {
+  background: var(--cream);
+  color: var(--forest);
+}
+
+.text-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-underline-offset: 5px;
+}
+
+.hero-index {
+  align-self: flex-end;
+  color: rgba(244, 240, 230, 0.6);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+/* 4. Main content sections */
+.content-section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 82px 7%;
+}
+
+.section-heading {
+  margin-bottom: 38px;
+}
+
+.section-heading .eyebrow,
+.resume-intro .eyebrow {
+  color: #789C24;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.education-list,
+.coursework-list {
+  display: grid;
+  gap: 0;
+}
+
+.education-item,
+.experience-item,
+.achievement-item,
+.course-item {
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.education-item h3,
+.experience-item h3,
+.achievement-item h3,
+.course-item h3 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+  letter-spacing: -0.035em;
+}
+
+.institution,
+.study-status,
+.result-note,
+.skills-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.study-status {
+  white-space: nowrap;
+}
+
+.item-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.item-category {
+  margin-bottom: 10px;
+  color: #789C24;
+}
+
+.item-date {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.experience-item ul,
+.achievement-item ul,
+.resume-entry ul {
+  padding-left: 20px;
+}
+
+.experience-item li,
+.achievement-item li {
+  margin-bottom: 7px;
+}
+
+.result-note {
+  display: inline-block;
+  margin: 8px 0 0;
+  font-weight: 600;
+}
+
+.course-item {
+  max-width: 820px;
+}
+
+.course-item p:last-child {
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+/* 5. Skills and contact sections */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-list span {
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.skills-note {
+  margin-top: 20px;
+}
+
+.contact-section {
+  padding: 80px 10%;
+  background: var(--forest);
+  color: var(--cream);
+}
+
+.contact-section .eyebrow {
+  color: var(--lime);
+}
+
+.contact-section h2 {
+  max-width: 650px;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+}
+
+.contact-section > p:not(.eyebrow) {
+  max-width: 550px;
+  color: rgba(244, 240, 230, 0.8);
+}
+
+.contact-email,
+.contact-linkedin {
+  display: block;
+  width: fit-content;
+  margin-top: 20px;
+  color: var(--cream);
+}
+
+.contact-linkedin {
+  margin-top: 12px;
+}
+
+.resume-intro {
+  padding: 55px 10% 30px;
+  text-align: center;
+}
+
+.resume-intro h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.site-footer {
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 6. One-page resume layout */
+.resume-sheet {
+  width: min(850px, 90%);
+  margin: 20px auto 80px;
+  padding: 48px 58px;
+  background: #fffdf7;
+  color: #183D32;
+  border: 1px solid var(--line);
+  font-size: 0.79rem;
+  line-height: 1.45;
+}
+
+.resume-header {
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--forest);
+}
+
+.resume-header h1 {
+  margin-bottom: 4px;
+  font-size: 2.2rem;
+  letter-spacing: -0.06em;
+}
+
+.resume-header > p {
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.72rem;
+}
+
+.resume-profile {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-block {
+  padding-top: 13px;
+}
+
+.resume-block h2 {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.resume-entry {
+  margin-bottom: 9px;
+}
+
+.resume-entry h3 {
+  margin-bottom: 3px;
+  font-size: 0.8rem;
+}
+
+.resume-entry p,
+.resume-entry ul {
+  margin-bottom: 0;
+}
+
+.resume-entry ul {
+  padding-left: 17px;
+}
+
+.resume-entry li {
+  margin-bottom: 2px;
+}
+
+/* 7. Keyboard focus and responsive layout */
+a:focus-visible {
+  outline: 3px solid #789C24;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-nav {
+    gap: 12px 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 75px 7%;
+  }
+
+  .hero-index {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 17vw, 6rem);
+  }
+
+  .content-section {
+    padding: 60px 7%;
+  }
+
+  .education-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .study-status {
+    white-space: normal;
+  }
+
+  .contact-section {
+    padding: 65px 7%;
+  }
+
+  .resume-sheet {
+    width: 94%;
+    padding: 28px 22px;
+  }
+
+  .site-footer {
+    padding: 20px 7%;
+  }
+}
+
+/* 8. A4 print: show only the resume */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #resume,
+  #resume * {
+    visibility: visible;
+  }
+
+  #resume {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: white;
+    color: black;
+    font-size: 9pt;
+    line-height: 1.3;
+  }
+
+  #resume h1,
+  #resume h2,
+  #resume h3,
+  #resume p,
+  #resume li,
+  #resume a {
+    color: black;
+  }
+
+  #resume a {
+    text-decoration: none;
+  }
+
+  #resume .resume-block {
+    padding-top: 8px;
+  }
+
+  #resume .resume-entry {
+    margin-bottom: 5px;
+  }
+
+  #resume .resume-header h1 {
+    font-size: 21pt;
+  }
+
+  #resume .resume-block h2 {
+    font-size: 10pt;
+  }
+
+  #resume .resume-entry h3 {
+    font-size: 9pt;
+  }
+
+  #resume .resume-profile {
+    padding: 9px 0;
+  }
+}
